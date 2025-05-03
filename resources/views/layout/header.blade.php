@@ -16,7 +16,7 @@
         {{-- sidebar --}}
         <aside class="w-64 bg-gray-800 text-white flex flex-col">
             <div class="p-4 text-center text-lg font-bold bg-gray-900">
-                Panel Admin
+                Panel {{ Auth::user()->role === 'admin' ? 'Admin' : 'User' }}
             </div>
             <nav class="flex-1">
                 <ul class="space-y-2 p-4">
@@ -68,6 +68,12 @@
                     @endif
                 </ul>
             </nav>
+
+            <div class="p-4 text-center">
+                        <a href="{{ route('homepage') }}" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded mb-4 inline-block">
+                            Kembali ke Homepage
+                        </a>
+            </div>
 
             @if (Auth::check())
                 <div class="p-4 text-center">

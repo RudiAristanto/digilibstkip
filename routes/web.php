@@ -8,6 +8,8 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\UploadMandiriController;
 use App\Http\Controllers\AuthManualController;
 use App\Http\Controllers\FDocumentController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 
 Route::get('/', [FDocumentController::class, 'index'])->name('homepage');

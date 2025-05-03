@@ -18,8 +18,8 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })->create();
 
-    $app->routeMiddleware([
-        'checkrole' => CheckRole::class,
-    ]);
+    // $app->routeMiddleware([
+    //     'checkrole' => CheckRole::class,
+    // ]);
 
-    return $app;
+    // return $app;
